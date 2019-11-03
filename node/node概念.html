@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /*
+    - 什么是node？
+      node是一个工具或者说是环境，不是一门语言（服务器语言）
+      特点：
+      基于V8引擎（webkit）渲染和解析js的
+      单线程,无阻塞I/O操作,提供了事件驱动
+
+    - node为什么叫后台语言？
+      之所以把node称之为服务器端语言，是因为node给与js操作服务器的能力，
+      我们在服务器端安装node，使用js完成服务器端需要处理的一些事情，
+      最后把写好的js代码交给node环境即可
+
+      之前说js是一门客户端脚本语言，js代码写完了，如果不运行在浏览器中展示出来效果，这些js代码就毫无意义了，
+      想要让js代码有意义，把js代码交给浏览器，然后浏览器内核把js代码解析后，再展示出来效果，
+      同样把js代码交给了node处理，node把js代码解析，再展示效果，
+      与其说node是后台语言，不如说js是后台语言，只不过是js想作为后台语言，需要借助node提供的环境，
+      就像是浏览器给js提供了运行的环境一样，所以node不是一门后台语言
+     
+
+    - 在node环境中把js代码执行
+      。REPL命令（Read-Evaluate-Print-Loop,输入-求值-输出-循环）
+
+        应用中有个Node.js command prompt 是node的命令窗口 或者直接dos窗口
+        node 回车 进入REPL命令输入模式
+        var a=12;
+        var b=13;
+        a+b
+        25
+
+      。基于node xxx.js 命令执行
+     
+    
+      。基于WS这类编辑器工具直接执行 ，选择js文件，直接
+      原理：运行WS的时候,直接找到node安装文件，把node运行了，不行的把node.exe安装目录加进来
+
+      基于node命令执行，我们需要先找到当前文件所在的文件夹，在当前文件中打开dos窗口，在窗口中执行node xxx.js
+      ,这样就相当于在node环境下把js文件中的代码执行
+      1，基于dos命令中的cd一层层进图文件夹
+      2，在当前地址栏输入cmd，快速开发dos命令窗口
+      3，shift+鼠标右键，在此处打开命令窗口
+     mac中没有dos命令，是终端运行
+      1,打开终端窗口，cd 把js文件所在的文件夹拖到终端中，回车，最后node xxx.js
+      2,cd 一步步的找到文件
+     
+    - node下载
+      1，官网下载稳定版本（LTS），一路下一步，默认安装到c盘（c:/Program Files/nodejs）
+      2，直接复制别人下载好的noed到自己的磁盘下（需要相同位数的系统，32/64），通过改一下环境变量完成安装
+      电脑右键->属性->高级系统设置->环境变量->系统变量->path (加上c:/Program Files/nodejs路径)
+
+    - 验证node是否安装成功
+      1，window+r 打开运行窗口，输入 cmd打开dos窗口，输入node -v / --version
+
+    */
+    </script>
+</body>
+</html>

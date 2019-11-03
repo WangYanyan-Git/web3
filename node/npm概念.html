@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        npm模块管理：（第三方包管理器，yarn，bower...）
+        安装node后自带npm模块管理器
+        平时下载插件，是去网上找插件地址，然后下载到本地使用，（资源比较混乱，广告混杂）
+        使用模块管理器，直接基于命令下载到本地，不用再去网上找插件
+        
+        npm下载的资源都是在http://npmjs.com中下载的，国外服务器，网速较慢
+
+        npm命令：
+        下载第三方模块：默认安装最新版本
+            当前目录： npm install jquery   在哪块执行的就是下载到哪里了
+            全局安装： npm install -g jquery   -g 是 --global的缩写
+                          uninstall  移除
+            安装指定版本：npm install jquery@1.11.3
+            查看模块历史版本：npm view jquery > jquery.version.json（文件名自定义）
+            把当前模块的历史信息输出到具体的某个文件中
+            多次下载是覆盖
+
+        下载到全局，可以使用命令来操作
+            下载指定版本：
+            下载慢的问题：
+            1，基于nrm 切换到国内下载源上，（一般是淘宝镜像）
+               。 安装nrm到全局，因为需要使用命令 
+                nrm ls 查看当前可用的源
+                nrm use xxx 使用功能某个源
+            2，可以基于 yarn来安装管理
+               。 安装yarn到全局，但是yarn安装只能在本地，不能再全局
+                  yarn add jquery 
+                  yarn remove jquery
+
+            3，基于cnpm淘宝镜像来处理
+               。 安装cnpm到全局。。。？和npm命令一样
+
+
+        下载成功后，当前目录中多增加一个node_modules文件夹，在这个文件夹中找到我们安装过的模块
+        一般来说，下载下来的内容包含源码和最后供开发者使用的压缩版本
+        
+    思考：1，bower是从gitHub下载安装，有兴趣的同学回去研究它的使用
+         2，向全局下安装：less，babel-cli 
+        
+
+
+        */
+    </script>
+</body>
+</html>
