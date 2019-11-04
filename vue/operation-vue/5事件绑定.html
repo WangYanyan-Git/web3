@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+      <button v-on:click='fn'>点击</button>
+    </div>
+    <script>
+       
+        let vm= new Vue({
+            el:'#app',
+            data :{
+             msg:'123',
+             a:'a'
+            },
+            methods:{
+                fn(e) {
+                 console.log(this.a);
+                }
+                // fn:()=>{
+                //   console.log(this);
+                // }
+            }
+        })
+        /*
+        创建方法：vue给了专门定义的方法的methods对象
+        给事件绑定方法：v-on:click || @click
+
+        fn:vue自动传参=>事件对象 vue规定的事件对象：$event
+        fn(): 需要手动传参=>事件对象,之后参数一一对应的传递
+
+        data和methods的数据都会放到vue实例上，所以名字不能冲突，冲突会报错，
+        methods方法中使用data中的属性：this.属性名 获取
+        methods中的this都是指向vm，如果用箭头函数，this会变成上级作用域的this
+        */
+       
+    </script>
+</body>
+</html>

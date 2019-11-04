@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+    - vue概念
+        Vue: 是一款构建用户界面的渐进式前端框架，遵循MVVM设计模式
+
+        框架：vue，react，angular... 
+        有一套完整的解决方法，拥有自己的思想逻辑，核心是库，n多功能的组合
+
+        库：jquery，zepto，animate.css，swiper... 
+        拥有了某些功能的插件，用的时候直接下载调用就可以
+        
+        框架好比有一整套房子，里面沙发，冰箱，床都有
+        库：只是其中的沙发/冰箱/床
+        
+        渐进式：渐进增强，一点点的增加功能，通过组合完成完整的框架
+        vue全家桶：vue.js核心库 + vue-router路由 +vuex 状态管理+ axios调取后台数据...根据需求自由组合
+
+        渐进式的理解：
+        1，视图是声明式渲染：无需关心如何实现的，用就可以了，写的页面比较多，就会使用组件
+        2，组件化系统 ：功能组件，局部组件..., 多个组件组合成完整的页面，页面之间的跳转
+        3，路由(vue-router) :实现页面之间的跳转，
+        4，axios实现调取后台数据，数据过多的时候需要统一管理数据，
+        5，vuex数据管理，
+        6，less,sass, es6... 需要转义less，sass，es6的插件（babel）...，项目开发完成，打包压缩（webpack）
+        7, vue-cli : vue脚手架集成了以上的东西
+
+    -  vue特点：
+        核心只关注视图层
+        易学，轻量，灵活
+        适用于移动端项目
+        渐进式框架
+    - vue核心：
+        响应式的数据变化：
+          1，设计思想是MVVM
+          2，通过Object.defineProperty()方法来实现响应式数据变化
+          所以vue不支持ie8及以下浏览器兼容，因为使用了不可替代的方案：Object.defineProperty(),
+          Object.defineProperty():es5的语法
+        组合的视图组件：将ui页面映射为组件树，划分组件可维护，可复用
+
+        - MVVM && MVC：程序的设计思想
+        MVVM： 双向数据流，也有单向的
+        Model：数据
+        View : 视图
+        viewModel：视图模型
+        1，用户操作View-->通过ViewModel通知Model-->Model改变-->通过ViewModel 通知View -->View 重新渲染
+
+        MVC：单向数据流
+        Model：数据
+        View : 视图
+        Controller：控制器
+        1，View-->Controller 调取Model-->Model改变-->影响View重新渲染
+        2，View-->Controller 调取Model-->Model改变-->Controller 通知-->View 重新渲染
+
+    - 使用vue
+      下载：1，直接使用cdn提供的免费连接
+             https://cdn.jsdelivr.net/npm/vue/dist/vue.js ||
+             https://cdn.jsdelivr.net/npm/vue@2.6.0
+           2，使用npm安装：npm install vue ，
+              前提是先创建package.json安装依赖的清单列表：npm init
+           3，vue-cli脚手架直接生成vue项目
+
+
+     */
+    </script>
+</body>
+</html>

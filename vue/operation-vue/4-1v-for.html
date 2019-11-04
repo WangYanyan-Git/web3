@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+      <ul>
+          <li v-for="(item,index) of obj">
+                {{index+1}} {{item.name}}
+               <ul>
+                   <li v-for="(s,sindex) in item.price">{{index+1}}-{{sindex+1}} {{s}}</li>
+               </ul>
+          </li>
+      </ul>
+    </div>
+    <script>
+        /*
+        v-for:解决了循环问题,可以循环数组，对象，字符串
+        要循环谁，就在谁身上加v-for属性
+        */
+        let vm= new Vue({//根实例
+            el:'#app',//
+            data :{//存放数据的，vm实例代理了它,调用数据相当于vm.msg
+              msg:'hell word',// <!--小胡子语法-->
+              obj:[{name:'苹果',price:[1,2,3]},
+              {name:'4213',price:[1,2,3]},
+              {name:'苹果2',price:[1,2,3]}
+            ]
+            }
+        })
+       
+       
+    </script>
+</body>
+</html>

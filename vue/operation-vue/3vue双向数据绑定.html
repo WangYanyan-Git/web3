@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+       <input type="text" value="134" v-model="user"/><br/>
+       获取到的值是：{{user}}
+       <p>{{user}}</p>
+    </div>
+    <script>
+        //重点：实现原理  Object.defineProperty()
+        //vue会循环data中的数据（数据劫持），依次的增加getter和setter方法（vue内部帮我们做的事情）
+        //绑定v-model 的表单元素 input ,checkbox, radio,select 的value值会失效
+        //v-model实现流程:先把data的值赋值给了输入框，当输入框的值改变的时候影响了data中的值（数据）
+        //数据驱动改变了之前的dom操作
+    
+       let vm=new Vue({
+           el:'#app',
+           data:{
+            user:'999'
+           }
+       })
+       
+       
+    </script>
+</body>
+</html>

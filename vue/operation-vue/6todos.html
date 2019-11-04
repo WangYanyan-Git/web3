@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+   <div id="use">
+      <input type="text" v-model='val' @keyup="add"/>
+      <ul>
+          <li v-for="(item,index) in list">
+              {{item}}
+              <button v-on:click="remove(index)">删除</button>
+          </li>
+      </ul>
+   </div>
+    <script>
+        /*
+         需求：todolist
+         1，获取到用户输入的值
+         2，把输入的值，循环到页面中
+         3，点击每一项中的按钮，删除当前项
+        */
+       let vm= new Vue({
+           el:'#use',
+           data:{
+             list:[],
+             val:''
+           },
+           methods:{
+               add(e){
+                   if(e.keyCode===13){
+                    console.log(this.val);
+                    this.list.unshift(this.val);
+                    this.val="";
+                   }
+               },
+              remove(val){
+                this.list= this.list.filter((item,index)=>{
+                     return  index !==val
+                 })
+              }
+           }
+       })
+    </script>
+</body>
+</html>

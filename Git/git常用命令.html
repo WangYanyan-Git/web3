@@ -9,14 +9,14 @@
 <body>
     <script>
     /*
-    git init 在本地创建一个git仓库
+    git init 在本地创建一个git仓库 , 生成一个.git文件
     touch .gitignore 创建忽略文件  node_modules .idea
 
      - 从工作区提交到暂存区的操作：
         add . || -A （全部）||<file> : 从工作区提交到暂存区
-        reset（全部） ||  reset HEAD <file>（单个文件）: 暂存区回退到工作区
+        reset（全部） ||  reset <file>（单个文件）: 暂存区回退到工作区
 
-     - 从工作区提交到暂存区的操作：
+     - 从暂存区提交到历史区的操作：
         commit：暂存区提交到历史区 -m ’备注信息'
         reset 某次版本号 ：历史区后回退到某一次版本,在有多个历史版本的时候
 
@@ -27,12 +27,13 @@
      diff --cached :暂存区对比历史区
     
      - 连接远程仓库地址：
-        git remote add origin[给远程仓库起的别名] 远程仓库名
-        git remote remove origin 
-        git clone 远程仓库名：连接并克隆仓库的内容
-    - 配置
+        remote add origin[给远程仓库起的别名] 远程仓库地址
+        remote remove origin 
+        clone 远程仓库地址：连接并克隆仓库的内容
+
+    - 配置 --global是全局配置，不加是只当前的起作用，下一次还要再设置
         config --list/-l:显示当前的git配置
-        config --global user.name '[你的账号名]'
+        config --global user.name '[你的账号名]' 
         config --global user.email '[你的邮箱地址]' 注册账号的邮箱地址
 
     - 同步远程仓库 
@@ -55,8 +56,10 @@
 
     真实项目中情况：
     1，本地是空的，拉取远程仓库的代码（要改某一个分支）
-     。git clone 远程仓库名
+     。git clone 远程仓库地址
      。git fetch 同步远程所有的分支（clone完成后，远程仓库中又添加了新的分支的时候）
+     。add ,commit 操作到本地仓库
+     。pull / push操作
 
     2，先在本地开发，再同步到远程仓库
      。git init 在本地创建一个git仓库

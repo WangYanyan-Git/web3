@@ -28,29 +28,25 @@
      
 
     - 在node环境中把js代码执行
-      。REPL命令（Read-Evaluate-Print-Loop,输入-求值-输出-循环）
-
-        应用中有个Node.js command prompt 是node的命令窗口 或者直接dos窗口
+      1,REPL命令（Read-Evaluate-Print-Loop,输入-求值-输出-循环）
+      2,基于node xxx.js 命令执行
+      3,基于WS,VSCODE这类编辑器工具直接执行 ，选择js文件，直接run/code run
+      操作：
+      1,window应用中有个Node.js command prompt 是node的命令窗口 或者直接dos窗口
         node 回车 进入REPL命令输入模式
         var a=12;
-        var b=13;
-        a+b
-        25
-
-      。基于node xxx.js 命令执行
-     
-    
-      。基于WS这类编辑器工具直接执行 ，选择js文件，直接
-      原理：运行WS的时候,直接找到node安装文件，把node运行了，不行的把node.exe安装目录加进来
-
-      基于node命令执行，我们需要先找到当前文件所在的文件夹，在当前文件中打开dos窗口，在窗口中执行node xxx.js
+      2,基于node命令执行，我们需要先找到当前文件所在的文件夹，在当前文件中打开dos窗口，在窗口中执行node xxx.js
       ,这样就相当于在node环境下把js文件中的代码执行
-      1，基于dos命令中的cd一层层进图文件夹
-      2，在当前地址栏输入cmd，快速开发dos命令窗口
-      3，shift+鼠标右键，在此处打开命令窗口
-     mac中没有dos命令，是终端运行
-      1,打开终端窗口，cd 把js文件所在的文件夹拖到终端中，回车，最后node xxx.js
-      2,cd 一步步的找到文件
+      打开dos窗口：
+        （1，基于dos命令中的cd一层层进图文件夹
+        （2，在当前地址栏输入cmd，快速开发dos命令窗口
+        （3，shift+鼠标右键，在此处打开命令窗口
+      mac中没有dos命令，是终端运行
+        （1,打开终端窗口，cd 把js文件所在的文件夹拖到终端中，回车，最后node xxx.js
+        （2,cd 一步步的找到文件
+        control+c:结束执行
+        
+      3，原理：WS自带执行node的功能，VSCODE下载插件 code run
      
     - node下载
       1，官网下载稳定版本（LTS），一路下一步，默认安装到c盘（c:/Program Files/nodejs）
