@@ -8,13 +8,7 @@
     <script src="./vue.js"></script>
 </head>
 <body>
-    <div id="app">
-        {{msg}}
-        {{obj.x}}
-        {{obj.n}}
-        {{ary}}
-        <p>{{obj.a=12}}</p>
-    </div>
+   
     <script>
         /*
         使用vue会白给我们一个Vue实例
@@ -28,20 +22,7 @@
           3, 通过数组变异的方法：pop，push，shift，unshift，sort，reverse，splice改变原数组
               vm.ary.reverse();
         */
-        let vm= new Vue({//根实例
-            el:'#app',//
-            data :{//存放数据的，vm实例代理了它,调用数据相当于vm.msg
-              msg:'hell word',// <!--小胡子语法-->
-              obj:{n:'1',x:'abc'},
-              ary:[1,2,3,4]
-            }
-        })
-        //vm.$set(vm.obj,'name','123');
-        // vm.obj={
-        //     n:2,
-        //     x:'ccc'
-        // }
-        vm.ary.reverse();
+     
         
        
     </script>
