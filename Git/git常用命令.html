@@ -43,16 +43,16 @@
         备注：写代码之前先pull拉取最新代码，预防冲突
 
      - 分支的操作
-        branch :查看本地所有分支
-        branch 分支名:创建本地分支
-        branch -d 分支:删除本地分支
-        checkout：切换分支
-        checkout -b ：创建加切换本地分支一起操作
+        git branch :查看本地所有分支
+        git branch 分支名:创建本地分支
+        git branch -d 分支:删除本地分支
+        git checkout fenzhiming：切换分支
+        git checkout -b ：创建加切换本地分支一起操作
 
      - 合并分支:合并到那个分支，就先切换到那个分支，一般到master合并别的分支
        例如目前在0.3.2分支，0.3.2分支要合并到master分支
-       1，branch master 从0.3.2分支切换到master主干
-       2，master meger 0.3.2 合并0.3.2分支到master主干上
+       1，git checkout master 从0.3.2分支切换到master主干
+       2，git merge 0.3.2 合并0.3.2分支到master主干上
 
     真实项目中情况：
     1，本地是空的，拉取远程仓库的代码（要改某一个分支）
@@ -74,7 +74,6 @@
      例如：0.3.2版本在线上出问题了，直接再上线0.3.1版本，覆盖
 
 
-    
 
     */
     </script>
