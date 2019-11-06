@@ -9,15 +9,24 @@
 </head>
 <body>
     <div id="app">
-      
+      <input type='text' value="888" v-model='msg'/>
+      msg:{{msg}}
     </div>
     <script>
         //重点：实现原理  Object.defineProperty()
-        //vue会循环data中的数据（数据劫持），依次的增加getter和setter方法（vue内部帮我们做的事情）
+        //vue会循环data中的数据（数据劫持），依次的增加getter和setter方法（这是vue内部帮我们做的事情）
         //绑定v-model 的表单元素 input ,checkbox, radio,select 的value值会失效
         //v-model实现流程:先把data的值赋值给了输入框，当输入框的值改变的时候影响了data中的值（数据）
         //数据驱动改变了之前的dom操作
     
+         let vm= new Vue({
+             el:'#app',
+             data:{
+                msg:'999'
+             }
+         })
+
+
     </script>
 </body>
 </html>

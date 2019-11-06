@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+         map:映射 ,将原有的数组映射撑一个新数组
+         原数组不变，返回新数组，回调函数中返回什么就是什么
+         使用场景：更新数组
+        */
+
+        let ary=[1,2,3];
+ 
+       let newary=ary.map(function(item,index) {
+         return `<li>${item}</li>`
+       })
+       console.log(newary);
+       
+
+     
+
+    </script>
+</body>
+</html>

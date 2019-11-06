@@ -10,26 +10,25 @@
     <input type="text" value="" placeholder="请输入"  id="input">
     <script>
         //使用Object.defineProperty()实现一个双向数据绑定的效果
-       //es5自带的一个Object的属性，属性值是一个方法
-      //语法 Object.defineProperty(要操作的对象,'对象的属性,{ 给属性的描述 })
+      //语法 Object.defineProperty(要操作的对象,'对象的属性',{ 给属性的描述 })
+     
        var obj={};
-       Object.defineProperty(obj,'name',{
-          get(){
-             return input.value
-          },
-          set(val){
-            input.value=val; //改变obj.name的时候给input赋值
-          }
+      
+       Object.defineProperty(obj,'n',{
+           get(){//当获取obj.n的时候，触发的方法
+            return input.value; //返回什么值，obj.n=什么值
+           },
+           set(val){//当给obj.n赋值的时候，触发的方法
+             input.value=val; //当obj.n改变值得时候，让input的值=obj.n的值
+           }
+       })
+      
+       input.addEventListener('input',function () {
+           obj.n=this.value; //当输入的值改变的时候，让obj.n=输入的值 set
+           console.log(obj.n); // get
        })
 
-     input.addEventListener('keyup',function (e) {
        
-         if(e.keyCode==13){
-             obj.name=this.value;
-             console.log(obj.name);
-         }
-     })
-
        
     </script>
 </body>

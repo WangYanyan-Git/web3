@@ -19,34 +19,35 @@
         npm命令：
         下载第三方模块：默认安装最新版本
             当前目录： npm install jquery   在哪块执行的就是下载到哪里了
-            全局安装： npm install -g jquery   -g 是 --global的缩写
-                          uninstall  移除
+            全局安装： npm install -g jquery   -g 是 --global的缩写，下载到全局，可以使用命令来操作
+            移除已安装插件：npm uninstall jquery
             安装指定版本：npm install jquery@1.11.3
             查看模块历史版本：npm view jquery > jquery.version.json（文件名自定义）
             把当前模块的历史信息输出到具体的某个文件中
             多次下载是覆盖
-            下载到全局，可以使用命令来操作
+            
            
             下载慢的问题：
-            1，基于nrm 切换到国内下载源上，（一般是淘宝镜像）
-               。 安装nrm到全局，因为需要使用命令 
+            1，基于nrm命令切换到国内下载源上，（一般是淘宝镜像）
+               。 安装nrm到全局，因为需要使用命令 ，要安装到全局
+                npm intall nrm -g
                 nrm ls 查看当前可用的源
                 nrm use xxx 使用功能某个源
+                切换下载源后，还是使用npm install 下载
             2，可以基于 yarn来安装管理
                。 安装yarn到全局，但是yarn安装只能在本地，不能再全局
                   yarn add jquery 
                   yarn remove jquery
 
-            3，基于cnpm淘宝镜像来处理
-               。 安装cnpm到全局和npm命令一样
-
-
         下载成功后，当前目录中多增加一个node_modules文件夹，在这个文件夹中找到我们安装过的模块
         一般来说，下载下来的内容包含源码和最后供开发者使用的压缩版本
         
-    思考：1，bower是从gitHub下载安装，有兴趣的同学回去研究它的使用
-         2，向全局下安装：less，babel-cli 
-        
+       package.json:
+        保存在devDependencies：是开发时的依赖，如将es6编成es5的工具
+        npm install gulp --save-dev
+
+        保存在dependencies：线上运行时需要的依赖，打包时会被打包处理，例如axios
+         npm install axios --save 
 
 
         */

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+         reduce:收敛
+          原数组不变，返回的是叠加后的结果
+          有4个参数
+          使用场景：数组扁平化,计算求和
+        */
+
+        let ary=[1,2,3,4,5];
+ 
+    //    let newary= ary.reduce(function(prev,next,index,item) {
+    //         console.log(prev,next);
+    //         return next //本次的返回值会作为下一次的prev
+    //     })
+
+        let newarys= ary.reduce(function(prev,next,index,item) {
+            console.log(prev,next);
+            //1 2
+            //3 3
+            //6 4
+            //10 5
+            return prev+next
+        })
+        console.log(newarys);
+        
+        
+        let ary2=[{p:30,cont:3},{p:10,cont:2},{p:20,cont:2}];
+        let newaryss= ary2.reduce(function(prev,next) {
+            //0 + 30*3
+            //90 + 10*2
+            //110 + 20*2
+            //150
+            return prev+ next.p * next.cont 
+        },0)//默认指定第一次的prev的值为0
+        console.log(newaryss);
+        
+        let ary3=[[1,2],[1,2],[1,2]];
+       let newaryc= ary3.reduce(function(p,n) {
+            //[1,2] [1,2]
+            //[1,2,1,2][1,2]
+            return p.concat(n)
+        })
+        console.log(newaryc);
+        
+          
+       
+
+     
+
+    </script>
+</body>
+</html>

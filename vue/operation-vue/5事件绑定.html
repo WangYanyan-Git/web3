@@ -9,31 +9,38 @@
 </head>
 <body>
     <div id="app">
-      <button v-on:click='fn'>点击</button>
+      <button v-on:click='fn'>+</button>
+      <button @click='fns'>-</button>
+      {{msg}}
     </div>
     <script>
        
         let vm= new Vue({
             el:'#app',
             data :{
-             msg:'123',
-             a:'a'
+             msg:1
             },
             methods:{
                 fn(e) {
-                 console.log(this.a);
+                    this.msg+=1;
+                },
+                fns() {
+                    if(this.msg<=0){
+                        return
+                    }
+                    this.msg-=1;
                 }
-                // fn:()=>{
-                //   console.log(this);
-                // }
+            
             }
         })
         /*
         创建方法：vue给了专门定义的方法的methods对象
         给事件绑定方法：v-on:click || @click
-
-        fn:vue自动传参=>事件对象 vue规定的事件对象：$event
-        fn(): 需要手动传参=>事件对象,之后参数一一对应的传递
+          
+         方法带（）和不带（）的区别：
+        不带（）:vue自动传事件对象 
+        带（）: 需要手动传事件对象,之后参数一一对应的传递
+        vue规定的事件对象：$event
 
         data和methods的数据都会放到vue实例上，所以名字不能冲突，冲突会报错，
         methods方法中使用data中的属性：this.属性名 获取

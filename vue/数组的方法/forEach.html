@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        1，forEach专门用来循环数组，直接循环出value和索引key（index）值
+         不能return
+        */
+         
+        var ary=[12,23,34,45];
+
+        // ary.forEach((item,index) => {
+        //     console.log(item,index);
+        // });
+
+        //2，forEach , for in , for of 区别？？？
+
+        //for in循环出的是key,一般常用来遍历对象或json,也能遍历数组，拿到的是索引
+         
+        var obj={
+            name:'hmm',
+            ary:18
+        }
+         for (const key in obj) {
+             console.log(key, obj[key]);
+         }
+         for (const key in ary) {
+             console.log(key);
+         }
+        
+        //for of 一般遍历数组， 循环出的是value，不能直接遍历对象，配合Object.keys()遍历对象
+        console.log(Object.keys(obj));
+        
+        for (const val of Object.keys(obj)) {
+             console.log(val);
+         }
+         for (const val of ary) {
+             console.log(val);
+         }
+
+        //Object.keys(): 返回一个所有元素为字符串的数组
+   
+     
+
+    </script>
+</body>
+</html>

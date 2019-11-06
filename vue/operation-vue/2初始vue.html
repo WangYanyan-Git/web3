@@ -8,22 +8,40 @@
     <script src="./vue.js"></script>
 </head>
 <body>
-   
+   <div id='app'>
+       {{msg}}
+       {{obj.name}}
+       {{ary}}
+   </div>
     <script>
         /*
         使用vue会白给我们一个Vue实例
         new Vue :初始一个vue实例，根实例
-        el：’#app‘:告诉vue，要管理的页面范围，el的获取原理是querySelector获取的元素，注意不能是html
-        data：存放数据的属性，data中数据会被vue实例代理，页面中调取data的值
+        el：’#app‘:告诉vue，要管理的页面范围，el的获取元素原理是querySelector，注意不能是html
+        data：存放数据的属性，data中数据会被vue实例代理
         页面中使用数据：{{}} 小胡子语法，可以放js表达式，赋值，取值，三元运算符
         改变数据的方式：
           1， vm.$set(vm.obj,'name','123');
           2， vm.obj={} 替换原有data中的对象
-          3, 通过数组变异的方法：pop，push，shift，unshift，sort，reverse，splice改变原数组
-              vm.ary.reverse();
+          3, 通过数组变异的方法：pop，push，shift，unshift，sort，reverse，splice..改变原数组
+              vm.ary.pop();
         */
-     
         
+        let vm= new Vue({//vm===viewModel
+           el:'#app',
+           data:{
+             msg:'hello word',
+             obj:{name:'enheng'},
+             ary:[1,2,3,4,5]
+           }
+        })
+        //vm.$set(vm.obj,'name','123');
+        // vm.obj={
+        //     name:'999'
+        // }
+        vm.ary=vm.ary.map(function (item) {
+            return item*=3;
+        })
        
     </script>
 </body>

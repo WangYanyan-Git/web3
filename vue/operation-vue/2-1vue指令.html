@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app" >
+       <p v-text='obj.name'></p>
+       <p v-html="html"></p>
+       <p v-once>{{obj.name}}</p>
+    </div>
+     <script src="./vue.js"></script>
+    <script>
+        /*
+        vue指令：vue赋予了它特殊含义的行间属性，所有指令都以v-开头
+        v-model:输入框使用,来实现双向数据绑定
+        v-text:使用数据，解决小胡子语法闪一下的问题
+        v-html:渲染带html标签的
+        v-once:只渲染一次数据，第二次及以后渲染不起作用
+        v-for:解决了循环问题
+        */
+      
+        let vm= new Vue({
+            el:'#app',
+            data:{
+              num:'100',
+              obj:{name:'hmm'},
+              html:'<h2>我是标题</h2>'
+            }
+        })
+        vm.$set(vm.obj,'name','lilei')
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+[
+    {
+        "bookName": "JavaScript高级",
+        "bookPrice": 50.2,
+        "const":1
+    
+    },
+    {
+        "bookName": "vue入门",
+        "bookPrice": 40.2,
+        "const":1
+    }
+]

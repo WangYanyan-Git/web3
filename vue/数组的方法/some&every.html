@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+         some & every ：查找
+         some： 有一个符合条件的就返回true
+         every：所有的条件都满足返回true
+        */
+
+        let ary=[1,2,3,3,4,5,4];
+ 
+       let newary= ary.some(function(item,index) {
+            return item > 3
+        })
+        console.log(newary);
+
+        let newarys= ary.every(function(item,index) {
+            return item > 3
+        })
+        
+        console.log(newarys);
+          
+       
+
+     
+
+    </script>
+</body>
+</html>

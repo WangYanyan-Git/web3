@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue</title>
+    <script src="./vue.js"></script>
+</head>
+<body>
+    <div id="app">
+       <ul>
+           <li v-for='(item,index) of fruit'>
+               {{index+1}} {{item.name}}
+               <ul>
+                   <li v-for='(key,inx) of item.colcor'>
+                        {{index+1}}.{{inx+1}} {{key}}
+                   </li>
+               </ul>
+           </li>
+       </ul>
+    </div>
+    <script>
+       let vm =new Vue({
+           el:'#app',
+           data:{
+            fruit:[{name:'苹果',colcor:['red','green']},
+            {name:'香蕉',colcor:['red','green']},
+            {name:'梨',colcor:['red','green']}]
+           }
+       })
+    </script>
+</body>
+</html>

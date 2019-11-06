@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./bootstrap.css"/>
+</head>
+<body>
+   <div id='app'>
+       <div class="container">
+          <div class="row">
+                <table class="table table-hover">
+                        <caption class="text-center table-bordered">京东购物车</caption>
+                          <tr>
+                            <th>全选 <input type="checkbox"/></th>
+                            <th>商品</th>
+                            <th>单价</th>
+                            <th>数量</th>
+                            <th>小计</th>
+                            <th>操作</th>
+                          </tr>
+                        <tbody>
+                          <tr v-for='(item,index) of bookList'>
+                            <td><input type="checkbox"/></td>
+                            <td>{{item.bookName}}</td>
+                            <td>{{item.bookPrice}}</td>
+                            <td>{{item.const}}</td>
+                            <td>{{item.bookPrice*2}}</td>
+                            <td><button class="btn btn-danger">删除</button></td>
+                          </tr>
+                        </tbody>
+                  </table>
+          </div>
+       </div>
+   </div>
+</body>
+</html>
+<script src="./vue.js"></script>
+<script src="./axios.js"></script>
+<script>
+    //使用axios then中的回调函数需要是箭头函数
+    let vm= new Vue({
+        el:'#app',
+        created(){//钩子函数，在数据被初始化后调用，this是执行vm实例
+            //数据请求一般都在这里
+          this.getData();
+        },
+        methods:{
+          getData(){//获取数据
+            axios.get('./shoplist.json').then((res)=>{//成功的回调
+             this.bookList=res.data;
+           },(err)=> {//失败的回调
+               console.log(err);
+           })
+          }
+        },
+        data:{
+            bookList:[]
+        }
+    })
+
+</script>

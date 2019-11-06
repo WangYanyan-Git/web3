@@ -16,7 +16,7 @@
         有一套完整的解决方法，拥有自己的思想逻辑，核心是库，n多功能的组合
 
         库：jquery，zepto，animate.css，swiper... 
-        拥有了某些功能的插件，用的时候直接下载调用就可以
+        是拥有了某些功能的插件，用的时候直接下载调用就可以
         
         框架好比有一整套房子，里面沙发，冰箱，床都有
         库：只是其中的沙发/冰箱/床
@@ -29,7 +29,7 @@
         2，组件化系统 ：功能组件，局部组件..., 多个组件组合成完整的页面，页面之间的跳转
         3，路由(vue-router) :实现页面之间的跳转，
         4，axios实现调取后台数据，数据过多的时候需要统一管理数据，
-        5，vuex数据管理，
+        5，vuex状态管理，
         6，less,sass, es6... 需要转义less，sass，es6的插件（babel）...，项目开发完成，打包压缩（webpack）
         7, vue-cli : vue脚手架集成了以上的东西
 
@@ -39,34 +39,33 @@
         适用于移动端项目
         渐进式框架
     - vue核心：
-        响应式的数据变化：
+        响应式的数据变化：视图可以改变数据，数据也可以改变视图
           1，设计思想是MVVM
           2，通过Object.defineProperty()方法来实现响应式数据变化
-          所以vue不支持ie8及以下浏览器兼容，因为使用了不可替代的方案：Object.defineProperty(),
-          Object.defineProperty():es5的语法
-        组合的视图组件：将ui页面映射为组件树，划分组件可维护，可复用
+        vue不支持ie8及以下浏览器兼容，因为使用了不可替代的方案：Object.defineProperty()
+        组件化系统：组件可维护，可复用
 
         - MVVM && MVC：程序的设计思想
-        MVVM： 双向数据流，也有单向的
-        Model：数据
-        View : 视图
-        viewModel：视图模型
+        MVVM
+        M: Model数据
+        V: View视图
+        VM: viewModel视图模型
         1，用户操作View-->通过ViewModel通知Model-->Model改变-->通过ViewModel 通知View -->View 重新渲染
 
-        MVC：单向数据流
-        Model：数据
-        View : 视图
-        Controller：控制器
+        MVC
+        M: Model数据
+        V: View 视图
+        C :Controller：控制器
         1，View-->Controller 调取Model-->Model改变-->影响View重新渲染
         2，View-->Controller 调取Model-->Model改变-->Controller 通知-->View 重新渲染
 
     - 使用vue
-      下载：1，直接使用cdn提供的免费连接
+            1，直接使用cdn提供的免费连接
              https://cdn.jsdelivr.net/npm/vue/dist/vue.js ||
              https://cdn.jsdelivr.net/npm/vue@2.6.0
-           2，使用npm安装：npm install vue ，
+            2，使用npm安装：npm install vue ，
               前提是先创建package.json安装依赖的清单列表：npm init
-           3，vue-cli脚手架直接生成vue项目
+            3，vue-cli脚手架直接生成vue项目
 
 
      */
